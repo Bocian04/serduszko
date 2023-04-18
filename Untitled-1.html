@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Serce</title>
+    <script>
+      function drawHeart() {
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(225, 120);
+        ctx.bezierCurveTo(225, 111, 210, 75, 150, 75);
+        ctx.bezierCurveTo(60, 75, 60, 187.5, 60, 187.5);
+        ctx.bezierCurveTo(60, 240, 120, 306, 225, 360);
+        ctx.bezierCurveTo(330, 306, 390, 240, 390, 187.5);
+        ctx.bezierCurveTo(390, 187.5, 390, 75, 300, 75);
+        ctx.bezierCurveTo(255, 75, 225, 111, 225, 120);
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.font = 'bold 72px Arial';
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
+        ctx.fillText('Julia', 225, 225);
+        ctx.fillStyle = 'black';
+        ctx.font = 'bold 32px Arial';
+        ctx.fillText('Czy chcesz zostać moją dziewczyną?', 300, 450);
+      }
+    </script>
+  </head>
+  <body onload="drawHeart();">
+    <canvas id="myCanvas" width="600" height="600"></canvas>
+  </body>
+</html>
